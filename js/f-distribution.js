@@ -63,6 +63,10 @@ var generate_chart = function(){
     df1 = parseInt(document.getElementById("df1-input").value);
     df2 = parseInt(document.getElementById("df2-input").value);
 
+    var math = MathJax.Hub.getAllJax("probability-output")[0];
+    if (math != null)
+        MathJax.Hub.Queue(["Text",math, "P(a < F" + "_{" + df1.toString() + ", " + df2.toString() + "} < b) \\approx"]);
+
     var y = jStat.centralF.pdf(x, df1, df2);
     var increased_sufficiently = false;
     while(jStat.centralF.cdf(x, df1, df2) < CUTOFF_CDF_VALUE){
@@ -154,7 +158,7 @@ var generate_chart = function(){
             data: data_points,
             showInLegend : false
         },{
-            name: '',
+            name: 'f(x)',
             data: nulls,
             showInLegend : false
         }]
@@ -183,6 +187,8 @@ $(document).ready(function() {
             handle_selection(a,b);
         }
     });
+
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
 
     generate_chart();
 });
