@@ -1,0 +1,65 @@
+#top-navbar{
+    border-radius:0px;
+}
+
+#main-well{
+    height:100%;
+}
+
+#df-input-div{
+    margin-bottom: 20px;
+}
+
+#df-input-table{
+    margin:auto; 
+    margin-bottom:10px;
+}
+
+#df1-input{
+    width:75px; 
+    margin-right:20px;
+}
+
+#df2-input{
+    width:75px;
+}
+
+#generate-graph-button{
+    width:150px;
+    margin:auto; 
+    margin-bottom:10px;
+}
+
+#probability-input-table{
+    margin:auto; 
+    margin-bottom:10px;
+}
+
+#a-input{
+    width:77px; 
+    margin-right:20px;
+}
+
+#b-input{
+    width:77px; 
+    margin-right:20px;
+}
+
+#percentile-input-div{
+    margin:auto;
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+#percentile-input{
+    width: 70px;
+}
+
+#percentile-input-group{
+    margin:auto;
+}
+
+#percentile-output{
+    width: 25%;
+    margin: auto;
+}

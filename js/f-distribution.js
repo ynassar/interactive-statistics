@@ -111,7 +111,7 @@ var generate_chart = function(){
                         click_detected = true;
                         setTimeout(function(){
                             click_detected = false;
-                        }, 100);
+                        }, 500);
                     }
                 }
             },
@@ -186,6 +186,15 @@ $(document).ready(function() {
         if(a <= b){
             handle_selection(a,b);
         }
+    });
+
+    $("#percentile-input").change(function(){
+        var percentile = parseFloat(document.getElementById("percentile-input").value);
+        var pi = jStat.centralF.inv(percentile, df1, df2);
+        handle_selection(0, pi);
+        var math = MathJax.Hub.getAllJax("percentile-output")[0];
+        console.log(math);
+        MathJax.Hub.Queue(["Text", math, "\\pi_{" + percentile.toString() + "} \\approx " + pi.toString()]);  //+ "\\iff P(F_{" + df1.toString() + ", " + df2.toString() + "} < " + pi.toString() + ") \\approx" + percentile]);
     });
 
     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
