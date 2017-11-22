@@ -1,5 +1,5 @@
 
-var CUTOFF_CDF_VALUE = 0.99;
+var CUTOFF_CDF_VALUE = 0.991;
 var PRECISION = 2;
 var X_STEP = Math.pow(10, -PRECISION);
 var SELECT_PRECISION = 2;
