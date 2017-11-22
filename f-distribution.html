@@ -1,0 +1,83 @@
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.7.1/jstat.min.js"> </script>
+    <script src="js/f-distribution.js" type="text/javascript"></script>
+</head>
+    
+
+
+<body>
+    <nav class="navbar navbar-inverse" style="border-radius:0%">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">stat-tools</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="t-distribution.html">Student's t</a></li>
+                <li class="active"><a href="f-distribution.html">F</a></li>
+                <li><a href="chisquared-distribution.html">Chi-Squared</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="well" style="height:100%">
+        <div style="margin-bottom:20px;">
+            <table style="margin:auto; margin-bottom:10px;">
+                <tr>
+                    <td>
+                        <div class="input-group">
+                                <span class="input-group-addon" id="df1-addon">
+                                    \(df_1\)
+                                </span>
+                            <input id="df1-input" type="number" class="form-control" min="0" max="1000" value="5" aria-describedby="df1-addon" style="width:75px; margin-right:20px;">
+                        </div>
+                    </td>
+                    <td>      
+                        <div class="input-group">
+                            <span class="input-group-addon" id="df2-addon">
+                                \(df_2\)
+                            </span>
+                            <input id="df2-input" type="number" class="form-control" min="0" max="1000" value="6" aria-describedby="df2-addon" style="width:75px">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <button id="generate-graph-button" style="width:150px; margin:auto; margin-bottom:10px;" class="btn btn-primary btn-block"> Generate Graph </button>    
+        </form>    
+        <div id="plotarea"></div>
+        <div style="margin-top: 20px">
+            <table style="margin:auto; margin-bottom:10px">
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="a-addon">
+                                \(a\)
+                            </span>
+                            <input id="a-input" type="number" class="form-control" step="0.01" value="" aria-describedby="a-addon" style="width:77px; margin-right:20px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="b-addon">
+                                \(b\)
+                            </span>
+                            <input id="b-input" type="number" class="form-control" step="0.01" value="" aria-describedby="b-addon" style="width:77px; margin-right:20px;">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <p id="probability-output" align="center">
+                \(P(a < F_{5,6} < b) \approx \)
+            </p>
+        </div>
+    </div>
+    
+</body>
