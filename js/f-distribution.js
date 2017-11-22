@@ -51,7 +51,8 @@ var handle_selection = function(low, high){
     document.getElementById("a-input").value = low;
     document.getElementById("b-input").value = high;
     var math = MathJax.Hub.getAllJax("probability-output")[0];
-    MathJax.Hub.Queue(["Text",math, "P(" + low.toString() + " < F" + "_{ " + df1.toString() + ", "+df2.toString() + "}" + "< " + high.toString() + ") \\approx " + (jStat.centralF.cdf(high, df1, df2) - jStat.centralF.cdf(low, df1, df2)).toString()]);
+    if (math != null)
+        MathJax.Hub.Queue(["Text",math, "P(" + low.toString() + " < F" + "_{ " + df1.toString() + ", "+df2.toString() + "}" + "< " + high.toString() + ") \\approx " + (jStat.centralF.cdf(high, df1, df2) - jStat.centralF.cdf(low, df1, df2)).toString()]);
 }
 
 var generate_chart = function(){
