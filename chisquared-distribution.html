@@ -1,23 +1,50 @@
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
-</head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script src="https://code.highcharts.com/highcharts.src.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     
-<nav class="navbar navbar-inverse" style="border-radius:0%">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">stat-tools</a>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.7.1/jstat.min.js"> </script>
+        <script src="js/index.js" type="text/javascript"></script>
+    
+        <title> Interactive F Distribution </title>
+    </head>
+        
+    
+    
+    <body>
+        <nav id="top-navbar" class="navbar navbar-inverse bg-faded">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html" id="navbar-title"> 
+                        <i class="fa fa-bar-chart"></i>  <strong>InteractiveStatistics</strong>
+                    </a>
+                </div>1
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+    
+                    <li class="active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interactive Probability Distributions
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="f-distribution.html">F</a></li>
+                                    <li><a href="#">Exponential</a></li>
+                                    <li><a href="#">Gamma</a></li>
+                                    <li><a href="#">Beta</a></li>
+                                    <li class="active"><a href="chisquared-distribution.html">Chi-Squared</a></li>                                
+                                </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="well" id="main-well">
+    
         </div>
-        <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="t-distribution.html">Student's t</a></li>
-            <li><a href="f-distribution.html">F</a></li>
-            <li class="active"><a href="chisquared-distribution.html">Chi-Squared</a></li>
-        </ul>
-    </div>
-</nav>
-
-<body>
-
-</body>
+    </body>

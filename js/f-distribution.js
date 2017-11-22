@@ -167,7 +167,12 @@ var generate_chart = function(){
 
 
 $(document).ready(function() {
-    $("#generate-graph-button").on("click", function(){
+    $("#df1-input").change(function(){
+        chart.destroy();
+        generate_chart();
+    });
+
+    $("#df2-input").change(function(){
         chart.destroy();
         generate_chart();
     });
